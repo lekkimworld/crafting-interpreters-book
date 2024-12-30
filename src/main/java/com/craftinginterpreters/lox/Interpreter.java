@@ -50,7 +50,7 @@ class Interpreter implements Expr.Visitor<Object> {
                 return (double) left / (double) right;
             case STAR:
                 checkNumberOperands(expr.operator, left, right);
-                return (double) left * (double) left;
+                return (double) left * (double) right;
             case PLUS:
                 if (left instanceof Double && right instanceof Double) {
                     return (double) left + (double) right;
